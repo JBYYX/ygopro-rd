@@ -16,7 +16,7 @@ function cm.initial_effect(c)
 end
 --Atk & Def Down
 function cm.filter(c)
-	return c:IsLevelAbove(5) and c:IsRace(RACE_DRAGON)
+	return c:IsLevelAbove(5) and c:IsRace(RACE_DRAGON) and c:IsAbleToHand()
 end
 function cm.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(Card.IsAbleToGraveAsCost,tp,LOCATION_HAND,0,1,nil) end
