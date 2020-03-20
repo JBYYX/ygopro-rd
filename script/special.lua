@@ -60,7 +60,7 @@ end
 function RushDuel.chainop(e,tp,eg,ep,ev,re,r,rp)
 	local time=re:GetCode()
 	if re:IsHasType(EFFECT_TYPE_ACTIVATE) and re:IsActiveType(TYPE_TRAP) and time~=EVENT_CHAINING then
-		Duel.SetChainLimit(chaintime(time))
+		Duel.SetChainLimit(RushDuel.chaintime(time))
 	end
 end
 function RushDuel.chaintime(code)
